@@ -1,17 +1,16 @@
-package LiteralsExample;
-public class LiteralsExample {
+public class Main {
     public static void main(String[] args) {
-        
-        int age = 21;
-        float height = 5.9f;
-        char grade = 'A';
-        String name = "Alex";
-        boolean isStudent = true;
 
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("Height: " + height);
-        System.out.println("Grade: " + grade);
-        System.out.println("Is Student: " + isStudent);
+        int age = 21;              // Integer literal
+        double pi = 3.14;          // Double literal
+        char grade = 'A';          // Character literal
+        String name = "John";      // String literal
+        boolean isJavaFun = true;  // Boolean literal
+
+        System.out.println(age);
+        System.out.println(pi);
+        System.out.println(grade);
+        System.out.println(name);
+        System.out.println(isJavaFun);
     }
 }
