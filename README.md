@@ -16,6 +16,7 @@ Explore how Java programs are structured and executed
 
 Each folder in this repo contains one topic or code example that illustrates a specific concept in Java.
 
+
 📂 Repository Structure
 
 Example folder structure:
@@ -41,7 +42,7 @@ Each folder typically contains:
 
 Some of the learning examples include:
 
-HelloWorld – Your first Java program
+HelloWorld – First Java program
 
 JavaVariables – Working with variables and data types
 
@@ -73,11 +74,12 @@ Run the compiled program:
 
 java FileName
 
+
 💡 Tips for Learning
 
 🟦 Start with simple examples like HelloWorld or JavaVariables.
 🟦 Experiment by modifying code and running it again to see how it changes output.
-🟦 Look up concepts you’re unsure about — Java has extensive documentation and tutorials.
+🟦 Look up concepts you’re unsure about Java has extensive documentation and tutorials.
 
 🛠️ Contributing
 
