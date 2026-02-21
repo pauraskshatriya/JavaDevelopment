@@ -8,6 +8,9 @@ public class Main {
        System.out.println("Enter your name: ");
        String name = scanner.nextLine();
 
+      System.out.println("Enter your current class: ");
+      int standard = scanner.nextLine();
+
        System.out.println("Enter your age: ");
        int age = scanner.nextInt();
 
@@ -20,6 +23,7 @@ public class Main {
        System.out.println("Hello " + name);
        System.out.println("You are " + age + " years old");
        System.out.println("Your gpa is: " + gpa);
+       System.out.println("You are class: " + standard);
 
        if(isStudent){
            System.out.println("You are enrolled in classes");
