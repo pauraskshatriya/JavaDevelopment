@@ -1,31 +1,33 @@
 import java.util.Scanner;
 
-class Large {
+class Largest{
 
-    void findLargest(int a, int b) {
-        if (a > b) {
-            System.out.println("First number is greater");
+    // Method to find and display the largest number
+    void findLargest(int num1, int num2) {
+        if (num1 > num2) {
+            System.out.println("Largest number is: " + num1);
         } 
-        else if (b > a) {
-            System.out.println("Second number is greater");
+        else if (num2 > num1) {
+            System.out.println("Largest number is: " + num2);
         } 
         else {
-            System.out.println("Both numbers are equal");
+            System.out.println("Both numbers are equal: " + num1);
         }
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter first number: ");
-        int a = sc.nextInt();
+        int num1 = scanner.nextInt();
 
         System.out.print("Enter second number: ");
-        int b = sc.nextInt();
+        int num2 = scanner.nextInt();
 
-        Large obj = new Large();   // object creation
-        obj.findLargest(a, b);     // method call
+        // Object creation and method call
+        LargestNumber obj = new LargestNumber();
+        obj.findLargest(num1, num2);
 
-        sc.close();
+        scanner.close();
     }
 }
