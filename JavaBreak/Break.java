@@ -1,12 +1,13 @@
-public class Break{
+public class BreakDemo {
     public static void main(String[] args) {
 
         System.out.println("Printing numbers from 1 to 10 (stops at 5):");
 
         for (int i = 1; i <= 10; i++) {
+            // Stop the loop when i becomes 6
             if (i == 6) {
                 System.out.println("Loop stopped at i = " + i);
-                break; // exits the loop when i becomes 6
+                break;
             }
             System.out.println(i);
         }
