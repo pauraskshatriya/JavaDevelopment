@@ -5,22 +5,25 @@ public class Demo {
 
         try (Scanner sc = new Scanner(System.in)) {
 
-            System.out.print("Enter radius of the circle: ");
+            System.out.print("Enter the radius of the circle: ");
 
             if (!sc.hasNextDouble()) {
-                System.out.println("Invalid input. Please enter a numeric value.");
+                System.out.println("Error: Please enter a valid numeric value.");
                 return;
             }
 
-            double r = sc.nextDouble();
+            double radius = sc.nextDouble();
 
-            if (r < 0) {
-                System.out.println("Radius cannot be negative.");
+            if (radius <= 0) {
+                System.out.println("Error: Radius must be greater than 0.");
                 return;
             }
 
-            double area = Math.PI * r * r;
-            System.out.printf("Area of circle: %.2f%n", area);
+            double area = Math.PI * Math.pow(radius, 2);
+            double circumference = 2 * Math.PI * radius;
+
+            System.out.printf("Area of the circle: %.2f%n", area);
+            System.out.printf("Circumference of the circle: %.2f%n", circumference);
         }
     }
 }
