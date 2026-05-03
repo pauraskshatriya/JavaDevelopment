@@ -1,37 +1,36 @@
 import java.util.Scanner;
 
 public class Main {
-   public static void main(String[] args) {
+    public static void main(String[] args) {
 
-       Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-       System.out.println("Enter your name: ");
-       String name = scanner.nextLine();
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
 
-      System.out.println("Enter your current class: ");
-      int standard = scanner.nextLine();
+        System.out.print("Enter your current class: ");
+        int standard = scanner.nextInt();
 
-       System.out.println("Enter your age: ");
-       int age = scanner.nextInt();
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
 
-       System.out.println("What is your gpa: ");
-       double gpa = scanner.nextDouble();
+        System.out.print("What is your GPA: ");
+        double gpa = scanner.nextDouble();
 
-       System.out.println("Are you a student? (true/false): ");
-       boolean isStudent = scanner.nextBoolean();
+        System.out.print("Are you a student? (true/false): ");
+        boolean isStudent = scanner.nextBoolean();
 
-       System.out.println("Hello " + name);
-       System.out.println("You are " + age + " years old");
-       System.out.println("Your gpa is: " + gpa);
-       System.out.println("You are class: " + standard);
+        System.out.println("\nHello " + name + "!");
+        System.out.println("You are " + age + " years old.");
+        System.out.println("Your GPA is: " + gpa);
+        System.out.println("You are in class: " + standard);
 
-       if(isStudent){
-           System.out.println("You are enrolled in classes");
-       }
-       else{
-           System.out.println("You are NOT enrolled in classes");
-       }
+        if (isStudent) {
+            System.out.println("You are enrolled in classes.");
+        } else {
+            System.out.println("You are NOT enrolled in classes.");
+        }
 
-       scanner.close(); 
-   }
+        scanner.close();
+    }
 }
