@@ -2,17 +2,9 @@ import java.util.Scanner;
 
 class GreatestOfThreeNumbers {
 
-    // Returns the greatest number instead of printing directly (better practice)
+    // Returns the greatest number instead of printing directly
     static int findLargest(int a, int b, int c) {
-        if (a >= b && a >= c) {
-            return a;
-        } 
-        else if (b >= c) {
-            return b;
-        } 
-        else {
-            return c;
-        }
+        return Math.max(a, Math.max(b, c));
     }
 
     public static void main(String[] args) {
@@ -33,7 +25,7 @@ class GreatestOfThreeNumbers {
             System.out.println("The greatest number is: " + result);
 
         } catch (Exception e) {
-            System.out.println("Invalid input. Please enter integers only.");
+            System.out.println("Invalid input. Please enter valid integers.");
         } finally {
             sc.close();
         }
