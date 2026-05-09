@@ -1,3 +1,4 @@
+
 public class ES {
     public static void main(String[] args) {
         int day = 3;
@@ -10,7 +11,7 @@ public class ES {
             case 5 -> "Friday";
             case 6 -> "Saturday";
             case 7 -> "Sunday";
-            default -> "Invalid day";
+            default -> throw new IllegalArgumentException("Invalid day: " + day);
         };
 
         System.out.println(dayName);
