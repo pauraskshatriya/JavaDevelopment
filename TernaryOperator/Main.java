@@ -3,15 +3,21 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
 
-        System.out.print("Enter a number: ");
-        int number = scanner.nextInt();
+            System.out.print("Enter a number: ");
 
-        String result = (number % 2 == 0) ? "Even" : "Odd";
+            if (!scanner.hasNextInt()) {
+                System.out.println("Invalid input. Please enter an integer.");
+                return;
+            }
 
-        System.out.println("The number " + number + " is " + result + ".");
+            int number = scanner.nextInt();
 
-        scanner.close();
+            boolean isEven = number % 2 == 0;
+
+            System.out.println("The number " + number + " is " 
+                    + (isEven ? "Even" : "Odd") + ".");
+        }
     }
 }
