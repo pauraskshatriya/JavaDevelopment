@@ -2,10 +2,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
         try (Scanner scanner = new Scanner(System.in)) {
-
-            System.out.print("Enter a number: ");
+            System.out.print("Enter an integer: ");
 
             if (!scanner.hasNextInt()) {
                 System.out.println("Invalid input. Please enter an integer.");
@@ -13,11 +11,9 @@ public class Main {
             }
 
             int number = scanner.nextInt();
+            String result = (number % 2 == 0) ? "Even" : "Odd";
 
-            boolean isEven = number % 2 == 0;
-
-            System.out.println("The number " + number + " is " 
-                    + (isEven ? "Even" : "Odd") + ".");
+            System.out.println(number + " is " + result + ".");
         }
     }
 }
