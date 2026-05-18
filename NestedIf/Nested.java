@@ -1,8 +1,8 @@
 public class Nested {
     public static void main(String[] args) {
 
-        boolean isStudent = true;
-        boolean isSenior = false;
+        final boolean isStudent = true;
+        final boolean isSenior = false;
         double price = 9.99;
 
         double discount = 1.0;
@@ -20,8 +20,8 @@ public class Nested {
             System.out.println("No discount applied");
         }
 
-        price *= discount;
+        double finalPrice = price * discount;
 
-        System.out.printf("The price of a ticket is: $%.2f", price);
+        System.out.printf("The price of a ticket is: $%.2f%n", finalPrice);
     }
 }
