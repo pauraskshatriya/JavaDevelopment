@@ -1,25 +1,25 @@
-public class Main { // Fixed capitalization of 'public'
+public class Main {
 
     public static void main(String[] args) {
-        // Splitting the large print statement makes the code easier to read
-        System.out.println("Here I am using Java's Increment & Decrement Operators:");
-        System.out.println("Initial values: x = 1 & y = 3");
-        System.out.println("First, we will increment x twice.");
-        System.out.println("Then, we will decrement y twice.\n");
+        // Display introduction using a formatted block for clarity
+        System.out.println("=== Java Increment & Decrement Operators Demo ===");
+        System.out.println("Initial values: counter = 1, decrementer = 3");
+        System.out.println("Operations: Increment counter twice, decrement decrementer twice.\n");
 
-        int x = 1;
-        int y = 3;
+        // Use descriptive names instead of x and y
+        int counter = 1;
+        int decrementer = 3;
 
-        // Increment x twice (x++ is shorthand for x = x + 1)
-        x++;
-        x++;
+        // Increment counter twice (equivalent to counter = counter + 1)
+        counter++;
+        counter++;
 
-        // Decrement y twice (y-- is shorthand for y = y - 1)
-        y--;
-        y--;
+        // Decrement decrementer twice (equivalent to decrementer = decrementer - 1)
+        decrementer--;
+        decrementer--;
 
-        // Using printf (print formatted) for cleaner output without using the '+' sign
-        System.out.printf("Value of x after using Increment operator: %d%n", x);
-        System.out.printf("Value of y after using Decrement operator: %d%n", y);
+        // Output results using printf for aligned, clean formatting
+        System.out.printf("Final value of counter     (after ++): %d%n", counter);
+        System.out.printf("Final value of decrementer (after --): %d%n", decrementer);
     }
-}
+}   
