@@ -2,24 +2,25 @@ import java.util.Scanner;
 
 public class Abc {
     public static void main(String[] args) {
-        
+
         Scanner scanner = new Scanner(System.in);
 
-        double a;
-        double b;
-        double c;
+        try {
+            System.out.print("Enter the length of side A: ");
+            double a = scanner.nextDouble();
 
-        System.out.print("Enter the length of side A: ");
-        a = scanner.nextDouble();
+            System.out.print("Enter the length of side B: ");
+            double b = scanner.nextDouble();
 
-        System.out.print("Enter the length of side B: ");
-        b = scanner.nextDouble();
+            double c = Math.sqrt(a * a + b * b);
 
-        c = Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2));
+          
+            System.out.printf("The hypotenuse is: %.2f cm%n", c);
 
-        System.out.println("The hypotenuse is: " + c + "cm");
-
-        scanner.close();
+        } catch (Exception e) {
+            System.out.println("Invalid input. Please enter numeric values.");
+        } finally {
+            scanner.close();
+        }
     }
 }
-

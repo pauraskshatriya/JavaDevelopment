@@ -2,26 +2,26 @@ import java.util.Scanner;
 
 public class ArrayInputExample {
     public static void main(String[] args) {
+        // Using try-with-resources ensures the Scanner closes automatically
+        try (Scanner sc = new Scanner(System.in)) {
+            
+            // Define size in one place for easier updates later
+            int size = 5;
+            int[] numbers = new int[size];
 
-        Scanner sc = new Scanner(System.in);
+            System.out.println("Enter " + size + " numbers:");
 
-        // Create an array with 5 elements
-        int numbers[] = new int[5];
+            // Use .length to avoid "magic numbers" in loops
+            for (int i = 0; i < numbers.length; i++) {
+                numbers[i] = sc.nextInt();
+            }
 
-        // Take input from the user
-        System.out.println("Enter 5 numbers:");
+            System.out.println("The numbers you entered are:");
 
-        for (int i = 0; i < 5; i++) {
-            numbers[i] = sc.nextInt();
-        }
-
-        // Display the numbers entered
-        System.out.println("The numbers you entered are:");
-
-        for (int i = 0; i < 5; i++) {
-            System.out.println(numbers[i]);
-        }
-
-        sc.close();
+            // Use an enhanced for-loop (for-each) for cleaner output logic
+            for (int num : numbers) {
+                System.out.print(num + " ");
+            }
+        } 
     }
 }

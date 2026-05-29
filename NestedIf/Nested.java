@@ -1,28 +1,39 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Nested {
     public static void main(String[] args) {
+        final boolean isStudent = true;
+        final boolean isSenior = false;
 
-        boolean isStudent = true;
-        boolean isSenior = false;
-        double price = 9.99;
+        // Use BigDecimal for precise currency calculations
+        final BigDecimal BASE_PRICE = new BigDecimal("9.99");
+        final BigDecimal STUDENT_RATE = new BigDecimal("0.10");
+        final BigDecimal SENIOR_RATE = new BigDecimal("0.20");
 
-        if (isStudent) {
-            if (isSenior) {
-                System.out.println("You are a senior discount of 20%");
-                System.out.println("You are a student discount of 10%");
-                price *= 0.7;
-            } else {
-                System.out.println("You get a student discount of 10%");
-                price *= 0.9;
-            }
+        BigDecimal finalPrice;
+        String discountMessage;
+
+        if (isStudent && isSenior) {
+            // Combined discount: 10% + 20% = 30% off
+            BigDecimal totalRate = STUDENT_RATE.add(SENIOR_RATE);
+            finalPrice = BASE_PRICE.multiply(BigDecimal.ONE.subtract(totalRate));
+            discountMessage = "both student (10%) and senior (20%) discount";
+        } else if (isStudent) {
+            finalPrice = BASE_PRICE.multiply(BigDecimal.ONE.subtract(STUDENT_RATE));
+            discountMessage = "student discount of 10%";
+        } else if (isSenior) {
+            finalPrice = BASE_PRICE.multiply(BigDecimal.ONE.subtract(SENIOR_RATE));
+            discountMessage = "senior discount of 20%";
         } else {
-            if (isSenior) {
-                System.out.println("You get a senior discount of 20%");
-                price *= 0.8;
-            } else {
-                price *= 1;
-            }
+            finalPrice = BASE_PRICE;
+            discountMessage = "No discount applied";
         }
 
-        System.out.printf("The price of a ticket is: $%.2f", price);
+        // Ensure 2 decimal places for currency
+        finalPrice = finalPrice.setScale(2, RoundingMode.HALF_UP);
+
+        System.out.println("You get a " + discountMessage + ".");
+        System.out.printf("Original: $%.2f | Final Price: $%.2f%n", BASE_PRICE, finalPrice);
     }
-}
+}   

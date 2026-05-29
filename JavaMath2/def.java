@@ -1,12 +1,15 @@
-public class def {
-   public static void main(String[] args) {
+public class Def {
 
-       System.out.println(Math.PI);
-       System.out.println(Math.E);
+    public static void main(String[] args) {
 
-       double result;
+        // Display mathematical constants
+        System.out.println("Value of PI: " + Math.PI);
+        System.out.println("Value of E : " + Math.E);
 
-       result = Math.pow(3, 4);
-       System.out.println(result);
-   }
+        // Store result of power function
+        double result = Math.pow(3, 4);
+
+        // Display result
+        System.out.println("3 raised to the power 4 = " + result);
+    }
 }
