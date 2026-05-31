@@ -1,29 +1,14 @@
 import java.util.ArrayList;
-import java.util.Collections;
-
+import java.util.List;
 
 public class Main {
-    public static void main(String[]  args){
-        ArrayList<String> fruits= new ArrayList<>();
+    public static void main(String[] args) {
+        final List<String> fruits = new ArrayList<>(List.of(
+            "Apple", "Banana", "Coconut"
+        ));
 
-        fruits.add("Apple");
-        fruits.add("Banana");
-        fruits.add("Banana");
-        fruits.add("Coconut");
+        fruits.sort(null); // null = natural ordering, same as Collections.sort
 
-        //list.remove(0);
-        //fruits.set(0, "Pineapple");
-        //System.out.println(fruits.get(3));
-        //System.out.println(fruits.size());
-
-        Collections.sort(fruits);
-
-        for(String fruit : fruits){
-            System.out.println(fruit);
-        }
-
-
-
+        fruits.forEach(System.out::println);
     }
-    
 }
